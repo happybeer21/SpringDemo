@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.*;
 
-@Component("electronic")
+//@Component("electronic")
 public class EDMMusic implements Music {
     private List<String> musics = new ArrayList<>();
 

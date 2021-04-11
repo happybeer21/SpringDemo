@@ -33,6 +33,7 @@ public class MusicPlayer {
     }
 
     public MusicPlayer() {
+
     }
 
     public String playFavoriteMusic() {

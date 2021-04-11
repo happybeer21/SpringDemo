@@ -10,8 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-@Component
-@Scope("singleton")
+//@Component
 public class ClassicMusic implements Music{
 
     private List<String> musics = new ArrayList<>();
