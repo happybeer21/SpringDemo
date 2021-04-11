@@ -21,6 +21,8 @@ public class RockMusic implements Music {
         //return "Wind cries Mary";
     }
 
+    //append commit
+
     public void doMyInit() {
         System.out.println("My init do");
     }
