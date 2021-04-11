@@ -1,7 +1,8 @@
-package ru.ostanin.springdemo;
+package ru.ostanin.springdemo.genres;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import ru.ostanin.springdemo.Music;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -10,15 +11,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-@Component
-@Scope("singleton")
-public class ClassicMusic implements Music{
+public class ClassicMusic implements Music {
 
     private List<String> musics = new ArrayList<>();
 
     @Override
     public String getSong() {
-        return musics.get(new Random().nextInt(3));
+        return musics.get(new Random().nextInt(musics.size()));
         //return "Für Elise";
     }
 

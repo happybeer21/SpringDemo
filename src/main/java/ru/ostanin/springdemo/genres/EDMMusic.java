@@ -1,11 +1,11 @@
-package ru.ostanin.springdemo;
+package ru.ostanin.springdemo.genres;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.ostanin.springdemo.Music;
 
 import java.util.*;
 
-@Component("electronic")
 public class EDMMusic implements Music {
     private List<String> musics = new ArrayList<>();
 
@@ -15,7 +15,7 @@ public class EDMMusic implements Music {
 
     @Override
     public String getSong() {
-        return musics.get(new Random().nextInt(3));
+        return musics.get(new Random().nextInt(musics.size()));
         //return "Love in on Fire";
     }
 
