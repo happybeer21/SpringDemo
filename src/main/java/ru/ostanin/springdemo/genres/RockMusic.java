@@ -1,13 +1,13 @@
-package ru.ostanin.springdemo;
+package ru.ostanin.springdemo.genres;
 
 import org.springframework.stereotype.Component;
+import ru.ostanin.springdemo.Music;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-//@Component
 public class RockMusic implements Music {
     private List<String> musics = new ArrayList<>();
 
@@ -17,7 +17,7 @@ public class RockMusic implements Music {
 
     @Override
     public String getSong() {
-        return musics.get((int) (Math.random() * 3));
+        return musics.get(new Random().nextInt(musics.size()));
         //return "Wind cries Mary";
     }
 
